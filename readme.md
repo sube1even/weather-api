@@ -4,29 +4,38 @@ MongoDB database
 
 Node to start index.js everytime server restarts
 
+
 Docs
 ----
 To start API server
-`node index.js`
+```
+node index.js
+```
 
 Add MongoDB
-`$ sudo apt-get update`
-`$ sudo apt-get upgrade`
-`$ sudo apt-get install mongodb-server`
-`$ sudo service mongod start`
+```
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install mongodb-server
+$ sudo service mongod start
+```
 
 GET to /api/rainfall shows all results
-`http://localhost:3000/api/rainfall`
+```
+http://localhost:3000/api/rainfall
+```
 
 POST to /api/rainfall creates an entry eg.
 `{"amount":"1","date":"Sat Jul 01 2016 00:43:59 GMT+0930 (ACST)"}`
 
+
 Technologies
 ------------
-*Node
-*Express - Route management
-*MongoDB - Database storing rainfall data
-*SocketIO - Server
+* Node
+* Express - Route management
+* MongoDB - Database storing rainfall data
+* SocketIO - Server
+
 
 To do
 -----
