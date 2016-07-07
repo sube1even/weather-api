@@ -4,7 +4,7 @@ var Rain = require('./rainfall_model.js')
 module.exports = function(app) {
 
   // Add
-  app.post('/rainfall', function (req, res) {
+  app.post('/api/rainfall', function (req, res) {
     var newRain = new Rain(req.body);
     newRain.save(function(err) {
       if (err) {
@@ -15,7 +15,7 @@ module.exports = function(app) {
   });
 
   // Read
-app.get('/rainfall', function (req, res) {
+app.get('/api/rainfall', function (req, res) {
   Rain.find(function(err, rain) {
     if (err) {
       res.json({info: 'error during read'});
@@ -24,7 +24,7 @@ app.get('/rainfall', function (req, res) {
   })
 });
 
-  app.get('/rainfall/:id', function (req, res) {
+  app.get('/api/rainfall/:id', function (req, res) {
     Rain.findById(req.params.id, function(err, rain) {
       if (err) {
         res.json({info: 'error during read', error:err});
