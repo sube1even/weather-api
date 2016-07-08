@@ -1,5 +1,11 @@
+Info
+====
+This is a work in progress to develop my js skills in developing an API with ExpressJS and MongoDB. Currently this is an API to take care of writing to MongoDB from a RaspberryPi with connected sensors. It will also provide a service for displaying results to an Angular2 app in the future.
+
+Repo for RaspberryPi https://github.com/sube1even/weather-rpi
+
 Required
-========
+--------
 MongoDB database
 
 Node to start index.js everytime server restarts
@@ -7,17 +13,17 @@ Node to start index.js everytime server restarts
 
 Docs
 ----
-To start API server
-```
-node index.js
-```
-
 Add MongoDB
 ```
 $ sudo apt-get update
 $ sudo apt-get upgrade
 $ sudo apt-get install mongodb-server
 $ sudo service mongod start
+```
+
+To start API server
+```
+node index.js
 ```
 
 GET to /api/rainfall shows all results
@@ -34,12 +40,12 @@ Technologies
 * Node
 * Express - Route management
 * MongoDB - Database storing rainfall data
-* SocketIO - Server
+* SocketIO - Server [may not need]
 
 
 To do
 -----
-Add externally accessible url - NoIP service or similar
+Add externally accessible url ('NoIP' service or similar)
 
 Add location, daily, weekly, monthly, yearly results to API?
 
