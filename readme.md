@@ -6,9 +6,9 @@ Repo for RaspberryPi https://github.com/sube1even/weather-rpi
 
 Required
 --------
-MongoDB database
-
-Node to start index.js everytime server restarts
+* Install and run MongoDB database service
+* NPM install to add all required Node packages
+* Node to start index.js everytime server restarts
 
 
 Docs
