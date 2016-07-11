@@ -40,7 +40,7 @@ Technologies
 * Node
 * Express - Route management
 * MongoDB - Database storing rainfall data
-* SocketIO - Server [may not need]
+* SocketIO - (Server) Update SocketIO client to deliver realtime weather to Angular2 frontend
 
 
 To do
