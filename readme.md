@@ -46,6 +46,7 @@ Technologies
 To do
 -----
 Add externally accessible url ('NoIP' service or similar)
+http://www.noip.com/support/knowledgebase/install-ip-duc-onto-raspberry-pi/
 
 Add location, daily, weekly, monthly, yearly results to API?
 
