@@ -1,5 +1,5 @@
 var _ = require('lodash');
-var Rain = require('./rainfall_model.js')
+var Rain = require('./rain.model.js')
 
 module.exports = function(app) {
 

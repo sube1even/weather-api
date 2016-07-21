@@ -11,8 +11,12 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-var rainfall = require('./rainfall_routes.js')(app);
+// set routes for api endpoints
+var rainfall = require('./rain.routes.js')(app);
+
+// add sensor services
+require('./rain.service.js');
 
 var server = app.listen(3000, function () {
-  console.log('server running');
+  console.log('Express api starting...');
 });
