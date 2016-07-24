@@ -3,8 +3,14 @@ var Rain = require('./rain.model.js')
 
 module.exports = function(app) {
 
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
   // Add
-  app.post('/api/rainfall', function (req, res) {
+  app.post('/api/rainfall', function (req, res, next) {
     var newRain = new Rain(req.body);
     newRain.save(function(err) {
       if (err) {
@@ -15,7 +21,7 @@ module.exports = function(app) {
   });
 
   // Read
-app.get('/api/rainfall', function (req, res) {
+app.get('/api/rainfall', function (req, res, next) {
   Rain.find(function(err, rain) {
     if (err) {
       res.json({info: 'error during read'});
@@ -24,7 +30,7 @@ app.get('/api/rainfall', function (req, res) {
   })
 });
 
-  app.get('/api/rainfall/:id', function (req, res) {
+  app.get('/api/rainfall/:id', function (req, res, next) {
     Rain.findById(req.params.id, function(err, rain) {
       if (err) {
         res.json({info: 'error during read', error:err});
